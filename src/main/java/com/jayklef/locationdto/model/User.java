@@ -19,4 +19,8 @@ public class User {
     private String lastname;
     private String email;
     private String password;
+
+    @ManyToOne(fetch = FetchType.EAGER, optional = false)
+    @JoinColumn(name = "location_id")
+    private Location location;
 }
